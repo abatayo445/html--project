@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton</title>
+    <link rel="stylesheet" href="badminton.css">
+
+</head>
+<body>
+    <header>
+      <div class="container">
+        <h1>Badminton</h1>
+        <nav>
+            <ul> 
+                <li><a href="./index(1).html">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="./badminton/badminton1.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="./badminton/badminton2.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="./badminton/badminton3.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="./badminton/badminton4.jpg" style="width:100%">
+        <div class="text">Caption Four</div>
+      </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    <h2>What is Badminton?</h2>
+    <h4>- Badminton is a racquet sport played using racquets to hit a shuttlecock across a net. Although it may be played<br>
+     with larger teams, the most common forms of the game are "singles" and "doubles"</h4>
+     <ol>
+        <li><h3>How to play SINGLES BADMINTON?</h3></li>
+        <h4>- As per badminton singles rules, the server starts from the right service court, and will serve from that side<br>
+         every time they have an even amount of points. A player serves from the left every time they have an odd amount<br>
+         of points. Each player will retain serve for as long as they keep winning points.</h4>
+         <li><h3>How to play DOUBLE BADMINTON?</h3></li>
+        <h4>- In badminton doubles, the server will start on the right-hand side and keep serving, while alternating sides<br>
+          with their team-mate, so long as they keep winning points. If the receiving side takes the point, they assume serve.</h4>
+     </ol>
+     <h2>The Benefits of playing Badminton</h2>
+     <ul>
+        <li>Benefits of Badminton</li>
+        <li>Badminton is a Total Body Workout</li>
+        <li>Socialising</li>    
+        <li>Badminton Improves Your Mental Wellbeing</li>
+        <li>Heart Health</li>
+        <li>Badminton Helps Reduce Health Risks</li>    
+        <li>Increased Life Expectancy</li>
+        <li>Improved Mobility</li>
+        <li>Badminton is a Flexible Exercise</li>
+     </ul>
+     <a href="./hobbies.html">BACK</a>
+</body>
+</html>
